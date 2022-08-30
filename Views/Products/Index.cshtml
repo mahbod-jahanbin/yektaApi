@@ -1,0 +1,89 @@
+﻿@model IEnumerable<yektaApi.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CPId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pqhotr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Psize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pzekhamat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pvazn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pestandard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PPic)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pqhotr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Psize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pzekhamat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pvazn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pestandard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PPic)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

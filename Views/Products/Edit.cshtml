@@ -1,0 +1,79 @@
+﻿@model yektaApi.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PId" />
+            <div class="form-group">
+                <label asp-for="CPId" class="control-label"></label>
+                <input asp-for="CPId" class="form-control" />
+                <span asp-validation-for="CPId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PName" class="control-label"></label>
+                <input asp-for="PName" class="form-control" />
+                <span asp-validation-for="PName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PInfo" class="control-label"></label>
+                <input asp-for="PInfo" class="form-control" />
+                <span asp-validation-for="PInfo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pqhotr" class="control-label"></label>
+                <input asp-for="Pqhotr" class="form-control" />
+                <span asp-validation-for="Pqhotr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Psize" class="control-label"></label>
+                <input asp-for="Psize" class="form-control" />
+                <span asp-validation-for="Psize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pzekhamat" class="control-label"></label>
+                <input asp-for="Pzekhamat" class="form-control" />
+                <span asp-validation-for="Pzekhamat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pvazn" class="control-label"></label>
+                <input asp-for="Pvazn" class="form-control" />
+                <span asp-validation-for="Pvazn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pestandard" class="control-label"></label>
+                <input asp-for="Pestandard" class="form-control" />
+                <span asp-validation-for="Pestandard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PPrice" class="control-label"></label>
+                <input asp-for="PPrice" class="form-control" />
+                <span asp-validation-for="PPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PPic" class="control-label"></label>
+                <input asp-for="PPic" class="form-control" />
+                <span asp-validation-for="PPic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

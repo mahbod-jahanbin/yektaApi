@@ -1,0 +1,107 @@
+﻿@model IEnumerable<yektaApi.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CFamily)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCodemeli)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCodeTax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ctel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cmobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpostalcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CContext)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ctype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CFamily)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCodemeli)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCodeTax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ctel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cmobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpostalcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CContext)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ctype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

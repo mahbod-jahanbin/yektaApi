@@ -1,0 +1,78 @@
+﻿@model yektaApi.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CPId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PInfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PInfo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pqhotr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pqhotr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Psize)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Psize)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pzekhamat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pzekhamat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pvazn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pvazn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pestandard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pestandard)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PPic)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PPic)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

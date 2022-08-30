@@ -1,0 +1,94 @@
+﻿@model yektaApi.Models.Customer
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CId" />
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CFamily" class="control-label"></label>
+                <input asp-for="CFamily" class="form-control" />
+                <span asp-validation-for="CFamily" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCodemeli" class="control-label"></label>
+                <input asp-for="CCodemeli" class="form-control" />
+                <span asp-validation-for="CCodemeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCodeTax" class="control-label"></label>
+                <input asp-for="CCodeTax" class="form-control" />
+                <span asp-validation-for="CCodeTax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CCity" class="control-label"></label>
+                <input asp-for="CCity" class="form-control" />
+                <span asp-validation-for="CCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cmail" class="control-label"></label>
+                <input asp-for="Cmail" class="form-control" />
+                <span asp-validation-for="Cmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ctel" class="control-label"></label>
+                <input asp-for="Ctel" class="form-control" />
+                <span asp-validation-for="Ctel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cmobile" class="control-label"></label>
+                <input asp-for="Cmobile" class="form-control" />
+                <span asp-validation-for="Cmobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAddress" class="control-label"></label>
+                <input asp-for="CAddress" class="form-control" />
+                <span asp-validation-for="CAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cpostalcode" class="control-label"></label>
+                <input asp-for="Cpostalcode" class="form-control" />
+                <span asp-validation-for="Cpostalcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CContext" class="control-label"></label>
+                <input asp-for="CContext" class="form-control" />
+                <span asp-validation-for="CContext" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ctype" /> @Html.DisplayNameFor(model => model.Ctype)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="UId" class="control-label"></label>
+                <input asp-for="UId" class="form-control" />
+                <span asp-validation-for="UId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
